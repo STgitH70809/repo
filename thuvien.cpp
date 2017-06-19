@@ -1285,13 +1285,13 @@ void xoasach(S_account A[], int N, int CSO) {
 	delete[]PHIEU;PHIEU = NULL;
 }
 void chinhsuasach(S_account A[], int N, int CSO) {
-	S_account S = A[CSO];
-	S.DS_muon[0] = 1;
-	S.DS_muon[1] = 1;
-	S.DS_muon[2] = 1;
-	S.DS_muon[3] = 1;
-	S.DS_muon[4] = 0;//cai nay vao ham bangtim de chi chon lay 1 cuon duy nhat va sua no
 	int sosach = get_F_N("books_infor.txt"), chon = 0, flag = 4;
+	S_account S = A[CSO];
+	S.DS_muon[0] = sosach+1;
+	S.DS_muon[1] = sosach+1;
+	S.DS_muon[2] = sosach+1;
+	S.DS_muon[3] = sosach+1;
+	S.DS_muon[4] = 0;//cai nay vao ham bangtim de chi chon lay 1 cuon duy nhat va sua no
 	S_book *SACH = new S_book[sosach];
 	int dstim[100], soluong = 0;//tam thoi cho la 100
 	string fstring = "";
