@@ -142,13 +142,6 @@ void in() {
 	system("cls");
 	//char a=219;
 	cout << "nhan Enter de chon, EsC de thoat khoi cua so" << endl;
-	textcolor(254);
-	cout << "      (_)        (_)  (_)(_)(_)     (_)(_)(_)    (_)(_)(_)       (_)(_)        " << endl
-		<< "      (_)        (_)  (_)     (_)   (_)     (_)  (_)     (_)  (_)      (_)     " << endl
-		<< "      (_)        (_)  (_)(_)(_)     (_)(_)(_)    (_)(_)(_)    (_)      (_)     " << endl
-		<< "      (_)        (_)  (_)     (_)   (_)          (_)   (_)    (_)      (_)     " << endl
-		<< "      (_)(_)(_)  (_)  (_)(_)(_)     (_)          (_)     (_)     (_)(_)        " << endl;
-
 	//ve khung
 	textcolor(11);
 	hinhchunhat(178, 12, 11, 40, 30);//tao hinh chu nhat tu ki tu co ma ASCII 178(bat dau o toa do (10,10) canh 40x30)
@@ -157,18 +150,22 @@ void in() {
 	HCN2(7, 19, 17, 29, 3);
 	HCN2(7, 19, 24, 29, 3);
 	HCN2(7, 19, 31, 29, 3);
-
 	textcolor(121);
 	//in noi dung
 	gotoxy(28, 18);
 	cout << "DANG NHAP";
-
 	gotoxy(28, 25);
 	cout << " DANG KI ";
-
 	gotoxy(28, 32);
 	cout << "  THOAT  ";
-
+	textcolor(243);
+	gotoxy(0,0);
+	cout<<"	   _        _____  ______   ______  ______    _____  "<<endl;
+	cout<<"	  | |      (_____)(____  \\ (_____ \\(_____ \\  / ___ \\ "<<endl;
+	cout<<"	  | |         _    ____)  ) _____) )_____) )| |   | |"<<endl;
+	cout<<"	  | |        | |  |  __  ( |  ____/(_____ ( | |   | |"<<endl;
+	cout<<"	  | |_____  _| |_ | |__)  )| |           | || |___| |"<<endl;
+	cout<<"	  |_______)(_____)|______/ |_|           |_| \\_____/ "<<endl;
 };
 //ham xulichuoi chuoi tra ve la s,a='y' khi nhan ten va con lai khi nhan mat khau
 //x,y la toa do bat dau doc du lieu tu ban phim
@@ -515,8 +512,9 @@ void menu(S_account TAIKHOAN, S_user choosen_user) {//in ra cac chuc nang
 	gotoxy(15, 32);cout << "    LUA CHON SACH    ";//2
 	textcolor(240 + (!TAIKHOAN.vaitro[0]) * 7);
 	gotoxy(15, 33);cout << "    XEM THONG BAO    ";//3
-	textcolor(240 + ((!TAIKHOAN.vaitro[0]) || choosen_user.phat) * 7);
+	textcolor(240 + (choosen_user.phat) * 7);
 	gotoxy(15, 34);cout << "    DOI MAT KHAU     ";//4
+	textcolor(240 + ((!TAIKHOAN.vaitro[0]) || choosen_user.phat) * 7);
 	gotoxy(15, 35);cout << "    TRA SACH         ";//5
 	textcolor(240 + (!TAIKHOAN.vaitro[2]) * 7);//mau xam khi khong co chuc nang thu thu
 	gotoxy(15, 36);cout << "    CHINH SUA SACH   ";//6
